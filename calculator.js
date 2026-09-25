@@ -12,12 +12,17 @@ function addHistory(num1, num2, oper, result){
     calcHistory.push(calcEquation)
 }
 
-//Function displays all the history of equations asked by the user
-function dispHistory(calcHistory){
+//Function displays all the history of equations asked by the user.  If 
+//user has no history, display message
+function dispHistory(calcHistory) {
     let i = 0
-    while(i < calcHistory.length){
-        console.log(calcHistory[i])
-        i++
+    if(calcHistory.length === 0) {
+        console.log("You do not have any stored history")
+    } else {
+        while(i < calcHistory.length){
+            console.log(calcHistory[i])
+            i++
+        }
     }
 }
 
